@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(231, 231, 231);
+  font-family: sans-serif;
+}
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.app__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+.app__left {
+  flex: 0.9;
+}
+.app__table {
+  margin-bottom: 25px;
+}
+.new_cases {
+  padding-bottom: 20px;
+}
+.info-flag {
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+.info-name {
+  margin: 7px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.info {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.select {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.title {
+  color: #cc1034;
+}
+.days_input {
+  border: none;
+  outline: none;
+  border-bottom: 1.8px solid #cc1034;
+  font-size: 16px;
+  width: 40px;
+}
+
+/* HIDE NUMBER INPUT ARROWS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* //////////////////////// */
+
+@media (max-width: 925px) {
+  .app {
+    flex-direction: column;
+  }
+  .app__left {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 25px;
+  }
+  .app__stats {
+    height: 380px;
+    flex-direction: column;
+  }
+  .infoBox:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
